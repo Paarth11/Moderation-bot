@@ -23,7 +23,7 @@ module.exports = {
 
     const targetUser = await interaction.guild.members.fetch(mentionable);
     if (!targetUser) {
-      await interaction.editReply("That user doesn't exist in this server.");
+      await interaction.editReply('That user doesnt exist in this server.');
       return;
     }
 
@@ -51,21 +51,21 @@ module.exports = {
 
     if (targetUserRolePosition >= requestUserRolePosition) {
       await interaction.editReply(
-        "You can't timeout that user because they have the same/higher role than you."
+        'You cant timeout that user because they have the same/higher role than you'
       );
       return;
     }
 
     if (targetUserRolePosition >= botRolePosition) {
       await interaction.editReply(
-        "I can't timeout that user because they have the same/higher role than me."
+       'I cant timeout that user because they have the same/higher role than me.'
       );
       return;
     }
 
     // Timeout the user
     try {
-      const { default: prettyMs } = await import('pretty-ms');
+       const { default: prettyMs } = await import('pretty-ms');
 
       if (targetUser.isCommunicationDisabled()) {
         await targetUser.timeout(msDuration, reason);
