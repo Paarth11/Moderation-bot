@@ -14,7 +14,8 @@
       "indent": ["error", 2],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "max-len":"warn"
+    "max-len":"warn",
+    "global-require":"off"
     }
     
   }
